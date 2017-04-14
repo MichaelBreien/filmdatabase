@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+  <meta charset="utf-8"/>
+  <head>
+    <script type="text/javascript" src="script/object.js"></script>
+    <script type="text/javascript" src="script/all_movies.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Arvo');
+    @import url('https://fonts.googleapis.com/css?family=Vibur');
+    </style>
+    <title>Filmdatabase</title>
+    <link rel="icon" href="https://yt3.ggpht.com/-hB-DDBDwFWo/AAAAAAAAAAI/AAAAAAAAAAA/DyBDgtlPiGc/s900-c-k-no-mo-rj-c0xffffff/photo.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header>
+      <h1>FILMDATABASE</h1>
+      <div class="søkemeny">
+        <form id="search" action="search_results.html" method="get">
+
+      <div>
+        <input id="film_title" name="film_title" type="text" placeholder="Skriv her" size="60" >
+      </div>
+
+    <input type="submit" id="submit_search" value="Søk">
+    <a href="advanced_search.html"><input type="button" id="avansert_søk" value="Avansert Søk"></a>
+  </form>
+        </div>
+        <a href="index.html" class="knapp">Hjem</a>
+        <a href="all_movies.html" class="knapp">Filmer</a>
+        <a href="#" class="knapp">Min liste</a>
+        <a href="#" class="knapp">Logg ut</a>
+      </header>
+            <div class="padding"></div>
+    <h2>ALLE FILMER</h2>
+    <ol id="all_movies">
+    </ol>
+  </body>
+</html>
