@@ -20,22 +20,22 @@ window.onload = function() {
 	
 	if (query_params.actor) {
         actor = document.getElementById("actor");
-		actor.innerHTML = query_params.actor;
+		
     }
 	
 	if (query_params.director) {
 		director = document.getElementById("director");
-		director.innerHTML = query_params.director;
+		
     }
 	
 	if (query_params.genre) {
         genre = document.getElementById("genre");
-		genre.innerHTML = query_params.genre;
+		
     }
 	
 	if (query_params.country) {
         country = document.getElementById("country");
-		country.innerHTML = query_params.country;
+		
     }
 	
 	//Her kan dere for eksempel kalle en (display) funksjon som viser søkeresultater 

@@ -1,5 +1,3 @@
-
-
 window.onload = function() {
     query_params = get_query_string_parameters();
     if (!query_params.id) {
@@ -26,32 +24,24 @@ window.onload = function() {
         i++;
     }
 
-
-    //finner ut gjennomsnitt
-    function reviewAvg(id){
-        var antallReviews = 0;
-        var total = 0;
-        review_object = reviews_object[id];
-
-        //sjekker om det finnes rating
-        if(review_object == null){
-            return 0; 
-        }
-        for(var a in review_object){
-            var nåværende = review_object[a];
-            var rating = nåværende["rating"];
-
-            antallReviews++;
-            total +=rating;
-        }
-
-        console.log(total, antallReviews);
-        var snitt = total/antallReviews;
-        console.log(snitt.toFixed(1));
-        return snitt.toFixed(1);
-    }
-
-    reviewAvg(query_params.id);
+function review(id){
+  var antallReviews = 0;
+  var total = 0;
+  review_object = reviews_object[id];
+  //Sjekker om det finnes noen rating, returner 0 hvis ikke.
+  if(review_object == null){
+    return 0;
+}
+  for(var a in review_object){
+    var nåværende = review_object[a];
+    var rating = nåværende["rating"];
+     
+    antallReviews++;
+    total += rating;
+}
+ var svar = total/antallReviews;
+ return svar.toFixed(1);
+}
 
 
     
@@ -97,10 +87,6 @@ window.onload = function() {
         trailer_element.src = youtube + trailer;
     }
    
-    
-    
-
-
-    document.getElementById("poster").src = "https://nelson.uib.no/o/" + firstNumber + "/" + query_params.id + ".jpg";
+   document.getElementById("poster").src = "https://nelson.uib.no/o/" + firstNumber + "/" + query_params.id + ".jpg";
 
 };

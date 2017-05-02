@@ -3,11 +3,11 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="style.css">
-		    <script type="text/javascript" src="script/object.js"></script>
-    <script type="text/javascript" src="script/genres.js"></script>
-    <script type="text/javascript" src="script/reviews.js"></script>
-    <script type="text/javascript" src="script/query_params.js"></script>
-    <script type="text/javascript" src="script/show_movie.js"></script>
+		<script type="text/javascript" src="script/object.js"></script>
+		<script type="text/javascript" src="script/genres.js"></script>
+		<script type="text/javascript" src="script/reviews.js"></script>
+		<script type="text/javascript" src="script/query_params.js"></script>
+		<script type="text/javascript" src="script/show_movie.js"></script>
 		<style>
 		@import url('https://fonts.googleapis.com/css?family=Arvo');
 		@import url('https://fonts.googleapis.com/css?family=Vibur');
@@ -27,66 +27,64 @@
 			<h1>FILMDATABASE</h1>
 			<div class="søkemeny">
 				<form id="search" action="search_results.html" method="get">
-
-			<div>
-				<input id="film_title" name="film_title" type="text" placeholder="Skriv her" size="60" >
+					<div>
+						<input id="film_title" name="film_title" type="text" placeholder="Søk etter tittel, regissør osv. her" size="60" >
+					</div>
+					<input type="submit" id="submit_search" value="Søk">
+					
+				</form>
 			</div>
-
-		<input type="submit" id="submit_search" value="Søk">
-		<a href="advanced_search.html"><input type="button" id="avansert_søk" value="Avansert Søk"></a>
-	</form>
-				</div>
-				<a href="index.html" class="knapp">Hjem</a>
-				<a href="all_movies.html" class="knapp">Filmer</a>
-				<a href="#" class="knapp">Min liste</a>
-				<a href="#" class="knapp">Logg ut</a>
-			</header>
-			<div class="padding"></div>
-			<h2 id="otitle"></h2>
-			<img id="poster" alt="headerimage" style="margin-top: 40px;">
-			<br> <div class="liste">
-				<input type="button" name="+ Min liste" value="+ Min liste"></div>
-				<p>Utgivelsesår: <span id="year"></span></p>
-				<p>Regi: <span id="dir"></span></p>
-				<p>Sjanger: <span id="genre"></span></p>
-				<p>Skuespillere: <span id="folk"></span></p>
-				<p>Produksjonsland: <span id="country"></span></p>
-				<p>Spilletid: <span id="length"></span> minutter</p>
-
-				<p></p>
-				<p id="description"></p>
-				<iframe id="youtube trailer id"></iframe>
-				<p>
-					Om du har sett filmen, hvilket terningkast ville du gitt den?
-				</p>
-				<div class="terningkast" style="text-align: center;">
-					<select>
-						<option>0</option>
-						<option>1</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
-						<option>6</option>
-					</select>
-					<input type="button" name="
-					Søk" value="Submit"><br><br>
-				</div>
-
-				<div class="commentbox" style="text-align: center;">
-					<form method='post'>
-						Navn: <input type='text' name='name' id='name' /><br>
-						E-mail: <input type='text' name='email' id='email' /><br>
-						Kommentar:<br>
-						<textarea name='comment' id='comment'></textarea><br>
-						<input type='button' value='Submit' />
-					</form>
-				</div><br><br><br>
-				<p>Kommentarer:</p>
+			<a href="index.html" class="knapp">Hjem</a>
+			<a href="all_movies.html" class="knapp">Filmer</a>
+			<a href="#" class="knapp">Min liste</a>
+			<a href="#" class="knapp">Logg ut</a>
+		</header>
+		<div class="padding"></div>
+		<h2 id="otitle"></h2>
+		<img id="poster" alt="headerimage" style="margin-top: 40px;">
+		<br> <div class="liste">
+			<input type="button" name="+ Min liste" value="+ Min liste"></div>
+			<p>Utgivelsesår: <span id="year"></span></p>
+			<p>Regi: <span id="dir"></span></p>
+			<p>Sjanger: <span id="genre"></span></p>
+			<p>Skuespillere: <span id="folk"></span></p>
+			<p>Produksjonsland: <span id="country"></span></p>
+			<p>Spilletid: <span id="length"></span> minutter</p>
+			<p></p>
+			<p id="description"></p>
+			<iframe id="youtube trailer id"></iframe>
+			<p>
+				Om du har sett filmen, hvilket terningkast ville du gitt den?
+			</p>
+			<div class="terningkast" style="text-align: center;">
+				<select>
+					<option>0</option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+				</select>
+				<input type="button" name="
+				Søk" value="Submit"><br><br>
 			</div>
-			<footer>
-				Laget av Michael Fabregas Breien
-			</footer>
-			    <script type="text/javascript" src="script/show_movie.js"></script>
-		</body>
-	</html>
+			<p>ANMELDELSER:</p><br>
+			
+			<div class="commentbox" style="text-align: center;">
+				<form method='post'>
+					Navn: <input type='text' name='name' id='name' /><br>
+					E-mail: <input type='text' name='email' id='email' /><br>
+					Kommentar:<br>
+					<textarea name='comment' id='comment'></textarea><br>
+					<input type='button' value='Submit' />
+				</form>
+			</div><br><br><br>
+			<p>Kommentarer:</p>
+		</div>
+		<footer>
+			Laget av Michael Fabregas Breien
+		</footer>
+		<script type="text/javascript" src="script/show_movie.js"></script>
+	</body>
+</html>

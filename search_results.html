@@ -6,7 +6,7 @@
 		<script src="script/search_results.js" type="text/javascript"></script>
 		<script src="script/object.js" type="text/javascript"></script>
 		<script src="script/advanced_search.js" type="text/javascript"></script>
-				<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
 		<style>
 				@import url('https://fonts.googleapis.com/css?family=Arvo');
 				@import url('https://fonts.googleapis.com/css?family=Vibur');
@@ -21,10 +21,10 @@
 			<div class="søkemeny">
 				<form id="search" action="search_results.html" method="get">
 					<div>
-						<input id="film_title" name="film_title" type="text" placeholder="Skriv her" size="60" >
+						<input id="film_title" name="film_title" type="text" placeholder="Søk etter tittel, regissør osv. her" size="60" >
 					</div>
 					<input type="submit" id="submit_search" value="Søk">
-					<a href="advanced_search.html"><input type="button" id="avansert_søk" value="Avansert Søk"></a>
+					
 				</form>
 			</div>
 			<a href="index.html" class="knapp">Hjem</a>
@@ -41,7 +41,8 @@
 		<!-- Returnere resultatene som en (ordered <ol>) liste -->
 	<ol id="res_list"></ol>
 	<script type="text/javascript" src="script/object.js"></script>
-				<script type="text/javascript" src="script/query_params.js"></script>
-				<script type="text/javascript" src="script/search.js"></script>
+	<script type="text/javascript" src="script/query_params.js"></script>
+	<script type="text/javascript" src="script/search.js"></script>
+	<script src="script/advanced_search.js" type="text/javascript"></script>
 </body>
 </html>
