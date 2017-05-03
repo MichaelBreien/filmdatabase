@@ -36,7 +36,8 @@
 			</div>
 			<a href="index.html" class="knapp">Hjem</a>
 			<a href="all_movies.html" class="knapp">Filmer</a>
-			<a href="#" class="knapp">Min liste</a>
+			<a href="minListe.html" class="knapp">Min liste</a>
+			<a href="minListe.html" class="knapp">Mine lån</a>
 			<a href="#" class="knapp">Logg ut</a>
 		</header>
 		<div class="padding"></div>
@@ -69,22 +70,24 @@
 				<input type="button" name="
 				Søk" value="Submit"><br><br>
 			</div>
-			<p>ANMELDELSER:</p><br>
-			
-			<div class="commentbox" style="text-align: center;">
-				<form method='post'>
-					Navn: <input type='text' name='name' id='name' /><br>
-					E-mail: <input type='text' name='email' id='email' /><br>
-					Kommentar:<br>
-					<textarea name='comment' id='comment'></textarea><br>
-					<input type='button' value='Submit' />
-				</form>
-			</div><br><br><br>
-			<p>Kommentarer:</p>
+			<p>ANMELDELSER:</p>
+		<ol id="review_list"></ol>
+		<p>GJENNOMSNITT:</p>
+		<p id="snitt"></p>
+		
+		<div class="commentbox" style="text-align: center;">
+			<form method='post'>
+				Navn: <input type='text' name='name' id='name' /><br>
+				E-mail: <input type='text' name='email' id='email' /><br>
+				Kommentar:<br>
+				<textarea name='comment' id='comment'></textarea><br>
+				<input type='button' value='Submit' />
+			</form>
 		</div>
-		<footer>
-			Laget av Michael Fabregas Breien
-		</footer>
-		<script type="text/javascript" src="script/show_movie.js"></script>
-	</body>
+	</div>
+	<footer>
+		Laget av Michael Fabregas Breien
+	</footer>
+	<script type="text/javascript" src="script/show_movie.js"></script>
+</body>
 </html>

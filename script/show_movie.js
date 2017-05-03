@@ -23,27 +23,6 @@ window.onload = function() {
         genre_element.innerHTML += genre_object[i] + " ";
         i++;
     }
-
-function review(id){
-  var antallReviews = 0;
-  var total = 0;
-  review_object = reviews_object[id];
-  //Sjekker om det finnes noen rating, returner 0 hvis ikke.
-  if(review_object == null){
-    return 0;
-}
-  for(var a in review_object){
-    var nåværende = review_object[a];
-    var rating = nåværende["rating"];
-     
-    antallReviews++;
-    total += rating;
-}
- var svar = total/antallReviews;
- return svar.toFixed(1);
-}
-
-
     
     // render page
     var title_element = document.getElementById("otitle");
@@ -89,4 +68,40 @@ function review(id){
    
    document.getElementById("poster").src = "https://nelson.uib.no/o/" + firstNumber + "/" + query_params.id + ".jpg";
 
+
+    var review_list = document.getElementById("review_list");
+    var snitt = document.getElementById("snitt");
+    snitt.innerHTML = review(query_params.id) + "/5";
+
+    for(var a in review_object){
+    
+    var reviews = review_object[a];
+    var rating = reviews["rating"]
+    var kommentar = reviews["comment"]
+    var dato = reviews["mod_date"]
+    var brukernavn = reviews["username"]
+    var p = document.createElement("p");
+    p.innerHTML=  "<br />" + "Brukernavn: " + brukernavn + "<br />" + " Rating:" + " " + rating + "<br /> " + " Dato: " + dato  + "<br /> " + " Kommentar: " + " " + kommentar
+    review_list.appendChild(p);
+
 };
+
+function review(id){
+  var theReviews = 0;
+  var reviewTotal = 0;
+  review_object = reviews_object[id];
+  //Sjekker om det finnes noen rating, returner 0 hvis ikke.
+  if(review_object == null){
+    return 0;
+}
+  for(var a in review_object){
+    var reviews = review_object[a];
+    var rating = reviews["rating"];
+     
+    theReviews++;
+    reviewTotal += rating;
+}
+ var svar = reviewTotal/theReviews;
+ return svar.toFixed(1);
+}
+}

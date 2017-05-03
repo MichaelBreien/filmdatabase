@@ -1,5 +1,9 @@
 query_params=get_query_string_parameters();
 
+function resetSearchResults() {
+	resultList.innerHTML = "";
+}
+
 function searchMovies(e) {
 
 	//sjekker gjennom filmene i object.js
@@ -33,8 +37,7 @@ function searchMovies(e) {
 }
 		//sammenligner input med Arrayen og printer film til konsollen
 		if(filmnavn.toLowerCase().includes(query_params.film_title.toLowerCase())) {
-			logMovie();
-			
+			logMovie();	
 		} if (regissør.toLowerCase().includes(query_params.film_title.toLowerCase())) {
 			logMovie();
 		} if (land.toLowerCase().includes(query_params.film_title.toLowerCase())) {
@@ -43,6 +46,8 @@ function searchMovies(e) {
 			if(skuespiller.toLowerCase().includes(query_params.film_title.toLowerCase())) {
 				logMovie();
 			}
+		} else if(query_params.film_title==="") {
+			resetSearchResults();
 		}
 		
 	} 

@@ -277,6 +277,15 @@ footer {
 	font-size: 13px;
 	height: 20px;
 }
+
+#review_list {
+	background: #1A1010;
+	height: 200px;
+	-webkit-overflow-scrolling:touch;
+	-ms-overflow-style: none;
+	overflow: auto;
+	overflow-x: hidden;
+}
 /*MEDIA QUERIES*/
 
 @media (max-width: 450px) {
